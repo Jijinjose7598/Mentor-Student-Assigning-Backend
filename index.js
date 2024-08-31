@@ -10,7 +10,7 @@ server.use(bodyparser.json());
 server.use("/mentors", require("./modules/mentor/mentor.controller"));
 server.use("/students", require("./modules/student/student.controller"));
 
-server.listen(3000, "localhost", () => {
+server.listen(3000, "0.0.0.0", () => {
   console.log("Server started on http://localhost:3000");
   initialize_mongo_connectivity();
 });
