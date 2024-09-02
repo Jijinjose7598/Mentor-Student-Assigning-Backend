@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const URI = "mongodb://localhost:27017/guvi"; // Including the database name in the URI
+const URI ="mongodb+srv://Jijin:jijin2000@guvitask.afrhp.mongodb.net/?retryWrites=true&w=majority&appName=GUVITASK"; // Including the database name in the URI
 
 async function initialize_mongo_connectivity() {
   console.log("Initializing MongoDB connectivity");
