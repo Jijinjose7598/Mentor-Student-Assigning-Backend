@@ -6,10 +6,7 @@ const { initialize_mongo_connectivity } = require("./database/connection");
 const server = express();
 
 server.use(
-  cors({
-    origin: "*", // Allow this origin
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-  })
+  cors()
 );
 
 server.use(bodyparser.json());
