@@ -1,16 +1,15 @@
 const mongoose = require("mongoose");
-const URI = "mongodb://localhost:27017";
+
+const URI = "mongodb://localhost:27017/guvi"; // Including the database name in the URI
 
 async function initialize_mongo_connectivity() {
-  console.log("mongodb connectivity initialize");
+  console.log("Initializing MongoDB connectivity");
   try {
-    const response = await mongoose.connect(URI, {
-      dbName: "guvi",
-    });
+    await mongoose.connect(URI);
 
-    console.log("mongodb connectivity success");
+    console.log("MongoDB connectivity successful");
   } catch (error) {
-    console.log(error);
+    console.error("MongoDB connection error:", error);
   }
 }
 
